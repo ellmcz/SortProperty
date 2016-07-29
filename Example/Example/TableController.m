@@ -17,13 +17,9 @@ tableViewData_h()
 @end
 
 @implementation TableController
-//tableViewData_m()
-- (NSMutableArray *)data{
-    if (!_data ) {
-        _data = [[NSMutableArray alloc] init];
-    }
-    return _data;
-}
+tableViewData_m()
+tableViewDataSource_m()
+tableViewSectionIndexTitle_m()
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -109,12 +105,7 @@ tableViewData_h()
     }
     self.tableView.sectionIndexColor=[UIColor colorWithRed:51/255 green:51/255 blue:51/255 alpha:1.0f];
 }
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return self.totalData.count;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.totalData[section] count];
-}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *cellID = @"cellID";
@@ -149,9 +140,6 @@ tableViewData_h()
     }else{
         return [NSString stringWithFormat:@"%@",self.pinYinData[section]];
     }
-}
--(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-   return [self.pinYinData copy];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
      id model=self.totalData[indexPath.section][indexPath.row];
