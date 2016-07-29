@@ -54,5 +54,10 @@ return self.totalData.count;\
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{\
 return [self.totalData[section] count];\
 }
+//
+#define tableViewSectionIndexTitle_m()\
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{\
+return [self.pinYinData copy];\
+}
 
 #endif /* SortPropertyHeader_h */

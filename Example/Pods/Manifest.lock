@@ -1,0 +1,12 @@
+PODS:
+  - SortProperty (1.0.2)
+
+DEPENDENCIES:
+  - SortProperty
+
+SPEC CHECKSUMS:
+  SortProperty: 78383eb2ad5efafe5087e924df5e7c7ae0e09686
+
+PODFILE CHECKSUM: 79ba8a4dd5447f34ad5c49d08545b3139affa739
+
+COCOAPODS: 1.1.0.beta.1
