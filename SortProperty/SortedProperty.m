@@ -118,7 +118,7 @@
  */
 + (NSMutableArray *)sortedTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName{
     NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
-
+    data=[data sortedDescendingWithChineseKey:PropertyName];
     propertyName=propertyName.propertyFirstPinYin;
     for (id m in data) {
         
@@ -244,6 +244,7 @@
  *  @return            新添加排序的模型属性值
  */
 + (NSMutableArray *)sortedTitleRatingWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName  FirstTitle:(NSString *)title{
+     data=[data sortedDescendingWithChineseKey:PropertyName];
     NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
     propertyName=propertyName.propertyFirstPinYin;
     NSString *first=[isBoolPropertyName uppercaseString];
@@ -621,6 +622,7 @@
 
 + (NSMutableArray *)sortedTitleSameDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName{
     data=[data sortedAscendingWithChineseKey:propertyName];
+  
     NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
     for (id m in data) {
         
