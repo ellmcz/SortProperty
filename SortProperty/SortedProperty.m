@@ -197,10 +197,7 @@
 
 + (NSMutableArray *)sortedModelDateWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName{
     propertyName=propertyName.propertyFirstPinYin;
-    NSString *first=[isBoolPropertyName uppercaseString];
-    first =[first substringToIndex:1];
-    NSString * last =[isBoolPropertyName substringFromIndex:1];
-    isBoolPropertyName=[NSString stringWithFormat:@"is%@%@",first,last];
+    isBoolPropertyName=isBoolPropertyName.isBool;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
     NSMutableArray *firstArray=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
     firstArray=(NSMutableArray *)[firstArray sortedDescendingWithChineseKey:propertyName];
@@ -247,10 +244,7 @@
      data=[data sortedDescendingWithChineseKey:PropertyName];
     NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
     propertyName=propertyName.propertyFirstPinYin;
-    NSString *first=[isBoolPropertyName uppercaseString];
-    first =[first substringToIndex:1];
-    NSString * last =[isBoolPropertyName substringFromIndex:1];
-    isBoolPropertyName=[NSString stringWithFormat:@"is%@%@",first,last];
+    isBoolPropertyName=isBoolPropertyName.isBool;
     data=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
     for (id m in data) {
         if (![[m valueForKey:isBoolPropertyName]isEqual:@1]) {
@@ -357,7 +351,6 @@
  */
 + (NSMutableArray *)sortedSelfTitleStringWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName FirstTitle:(NSString *)title{
     NSMutableArray *pinYinData=[self sortedTitleStringWithArray:data PropertyName:propertyName];
-    
     [pinYinData insertObject:title atIndex:0];
     return pinYinData;
 }
