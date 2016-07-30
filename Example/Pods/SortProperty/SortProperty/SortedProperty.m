@@ -37,12 +37,11 @@
             flag=1;
         }
     }
-    pinYinData=pinYinData.saveOnlyWithArray;
     if (flag==1) {
         [pinYinData insertObject:@"#" atIndex:pinYinData.count];
         }
     
-    return [pinYinData saveOnlyWithArray];
+    return pinYinData.saveOnlyWithArray;
 }
 /**
  *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串）
@@ -126,7 +125,7 @@
     }
     
    
-    return pinYinData;
+    return pinYinData.saveOnlyWithArray;
 }
 /**
  *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串,数字）
@@ -367,7 +366,6 @@
                     [tempData addObject:model];
                 }
             }
-            
             [totalData addObject:tempData];
             
         }

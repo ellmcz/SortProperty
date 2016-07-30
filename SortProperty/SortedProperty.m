@@ -42,7 +42,7 @@
         [pinYinData insertObject:@"#" atIndex:pinYinData.count];
         }
     
-    return [pinYinData saveOnlyWithArray];
+    return pinYinData.saveOnlyWithArray;
 }
 /**
  *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串）
@@ -125,8 +125,8 @@
         [pinYinData addObject:[m valueForKey:propertyName]];
     }
     
-   
-    return [pinYinData saveOnlyWithArray];
+
+    return pinYinData.saveOnlyWithArray;
 }
 /**
  *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串,数字）
@@ -187,7 +187,10 @@
 
 + (NSMutableArray *)sortedModelDateWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName{
     propertyName=propertyName.propertyFirstPinYin;
-    isBoolPropertyName=isBoolPropertyName.isBool;
+    NSString *first=[isBoolPropertyName uppercaseString];
+    first =[first substringToIndex:1];
+    NSString * last =[isBoolPropertyName substringFromIndex:1];
+    isBoolPropertyName=[NSString stringWithFormat:@"is%@%@",first,last];
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
     NSMutableArray *firstArray=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
     firstArray=(NSMutableArray *)[firstArray sortedDescendingWithChineseKey:propertyName];
@@ -233,7 +236,10 @@
 + (NSMutableArray *)sortedTitleRatingWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName  FirstTitle:(NSString *)title{
     NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
     propertyName=propertyName.propertyFirstPinYin;
-    isBoolPropertyName=isBoolPropertyName.isBool;
+    NSString *first=[isBoolPropertyName uppercaseString];
+    first =[first substringToIndex:1];
+    NSString * last =[isBoolPropertyName substringFromIndex:1];
+    isBoolPropertyName=[NSString stringWithFormat:@"is%@%@",first,last];
     data=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
     for (id m in data) {
         if (![[m valueForKey:isBoolPropertyName]isEqual:@1]) {
