@@ -37,12 +37,12 @@
             flag=1;
         }
     }
-    pinYinData=pinYinData.saveOnlyWithArray;
+    
     if (flag==1) {
         [pinYinData insertObject:@"#" atIndex:pinYinData.count];
         }
     
-    return pinYinData;
+    return [pinYinData saveOnlyWithArray];
 }
 /**
  *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串）
@@ -118,7 +118,7 @@
  */
 + (NSMutableArray *)sortedTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName{
     NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
-   data=[data sortedDescendingWithChineseKey:propertyName];
+    data=[data sortedDescendingWithChineseKey:propertyName];
     propertyName=propertyName.propertyFirstPinYin;
     for (id m in data) {
         
@@ -126,7 +126,7 @@
     }
     
    
-    return pinYinData;
+    return [pinYinData saveOnlyWithArray];
 }
 /**
  *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串,数字）

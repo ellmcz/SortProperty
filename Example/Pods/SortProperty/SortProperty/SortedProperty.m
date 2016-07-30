@@ -42,7 +42,7 @@
         [pinYinData insertObject:@"#" atIndex:pinYinData.count];
         }
     
-    return pinYinData;
+    return [pinYinData saveOnlyWithArray];
 }
 /**
  *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串）

@@ -8,6 +8,7 @@
 
 #ifndef SortPropertyHeader_h
 #define SortPropertyHeader_h
+
 #import "NSArray+Sort.h"
 #import "NSString+Chinese.h"
 #import "SortedProperty.h"
@@ -15,6 +16,7 @@
 #import "NSMutableArray+Sort.h"
 #import "NSString+Pure.h"
 #import "NSString+Property.h"
+
 ////
 #define Property_hSubFirstPinYin(Name)  @property (nonatomic, copy) NSString *propertyFirstPinYin##Name;
 #define Property_hBool(Name)    @property (nonatomic, assign) BOOL is##Name;
