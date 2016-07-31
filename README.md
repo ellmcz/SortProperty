@@ -51,8 +51,7 @@ return cell;
    self.pinYinData[section]返回字符串。
    通过section判断，设置自己需要。
 
-
 ```
 ## Lincense ##
 
-`PathCover` is available under the MIT license. See the LICENSE file for more info.
+`SortProperty` is available under the MIT license. See the LICENSE file for more info.
