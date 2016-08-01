@@ -16,11 +16,9 @@ PathCover requires Xcode 5, targeting either iOS 5.0 and above, ARC-enabled.
 [CocosPods](http://cocosPods.org) is the recommended methods of installation PathCover, just add the following line to 'Profile':
 
 
-pod ' SortProperty', '~> 1.0.2'
+pod ' SortProperty', '~> 1.3.3'
 
-
-
-## 1.下载事例程序，把事例程序代码中SortProperty文件夹，拖到自己项目中。
+ 1.下载事例程序，把事例程序代码中SortProperty文件夹，拖到自己项目中。
 ## How to use ##
 ```objc
 zooimg effect property to user, but if you user zooimg effect, will be dissmiss parallax effect.      
