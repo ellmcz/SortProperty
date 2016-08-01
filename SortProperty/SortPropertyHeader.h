@@ -8,7 +8,17 @@
 
 #ifndef SortPropertyHeader_h
 #define SortPropertyHeader_h
-
+#if __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
+FOUNDATION_EXPORT double SortPropertyVersion;
+FOUNDATION_EXPORT const unsigned char SortPropertyVersionString[];
+#import <SortPropertyHeader/NSArray+Sort.h>
+#import <SortPropertyHeader/NSString+Chinese.h>
+#import <SortPropertyHeader/NSMutableArray+Only.h>
+#import <SortPropertyHeader/NSString+Pure.h>
+#import <SortPropertyHeader/NSString+Property.h>
+#import <SortPropertyHeader/SortedProperty.h>
+#import <SortPropertyHeader/NSMutableArray+Sort.h>
+#else
 #import "NSArray+Sort.h"
 #import "NSString+Chinese.h"
 #import "SortedProperty.h"
@@ -16,6 +26,47 @@
 #import "NSMutableArray+Sort.h"
 #import "NSString+Pure.h"
 #import "NSString+Property.h"
+#endif
+
+#if __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
+#import <SortPropertyHeader/SortPropertyHeader.h>
+#elif __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
+#import <SortPropertyHeader/NSArray+Sort.h>
+#import <SortPropertyHeader/NSString+Chinese.h>
+#import <SortPropertyHeader/NSMutableArray+Only.h>
+#import <SortPropertyHeader/NSString+Pure.h>
+#import <SortPropertyHeader/NSString+Property.h>
+#import <SortPropertyHeader/SortedProperty.h>
+#import <SortPropertyHeader/NSMutableArray+Sort.h>
+#else
+#import "NSArray+Sort.h"
+#import "NSString+Chinese.h"
+#import "SortedProperty.h"
+#import "NSMutableArray+Only.h"
+#import "NSMutableArray+Sort.h"
+#import "NSString+Pure.h"
+#import "NSString+Property.h"
+#endif
+
+#if __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
+#import <YYCache/YYCache.h>
+#elif __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
+#import <SortPropertyHeader/NSArray+Sort.h>
+#import <SortPropertyHeader/NSString+Chinese.h>
+#import <SortPropertyHeader/NSMutableArray+Only.h>
+#import <SortPropertyHeader/NSString+Pure.h>
+#import <SortPropertyHeader/NSString+Property.h>
+#import <SortPropertyHeader/SortedProperty.h>
+#import <SortPropertyHeader/NSMutableArray+Sort.h>
+#else
+#import "NSArray+Sort.h"
+#import "NSString+Chinese.h"
+#import "SortedProperty.h"
+#import "NSMutableArray+Only.h"
+#import "NSMutableArray+Sort.h"
+#import "NSString+Pure.h"
+#import "NSString+Property.h"
+#endif
 
 ////
 #define Property_hSubFirstPinYin(Name)  @property (nonatomic, copy) NSString *propertyFirstPinYin##Name;
@@ -54,5 +105,9 @@ return self.totalData.count;\
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{\
 return [self.totalData[section] count];\
 }
-
+//
+#define tableViewSectionIndexTitle_m()\
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{\
+return [self.pinYinData copy];\
+}
 #endif /* SortPropertyHeader_h */
