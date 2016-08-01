@@ -49,7 +49,7 @@ FOUNDATION_EXPORT const unsigned char SortPropertyVersionString[];
 #endif
 
 #if __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
-#import <YYCache/YYCache.h>
+#import <SortPropertyHeader/SortPropertyHeader.h>
 #elif __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
 #import <SortPropertyHeader/NSArray+Sort.h>
 #import <SortPropertyHeader/NSString+Chinese.h>
