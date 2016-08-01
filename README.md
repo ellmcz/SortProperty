@@ -17,7 +17,7 @@ PathCover requires Xcode 5, targeting either iOS 5.0 and above, ARC-enabled.
 
 
 pod ' SortProperty', '~> 1.3.3'
-
+=========
  1.下载事例程序，把事例程序代码中SortProperty文件夹，拖到自己项目中。
 ## How to use ##
 ```objc
