@@ -432,32 +432,6 @@
     return totalData;
 }
 
-+ (NSMutableArray *)sortedSelfModelRatingWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName  IsBoolPropertyName:(NSString *)isBoolPropertyName{
-    propertyName=propertyName.propertyFirstPinYin;
-    NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    NSMutableArray *firstArray=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    firstArray=(NSMutableArray *)[firstArray sortedDescendingWithChineseKey:propertyName];
-    NSMutableArray *lastArray=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    @autoreleasepool {
-        for (int j = 0; j<pinYinData.count; j++) {
-            NSMutableArray *tempData = [[NSMutableArray alloc]init];
-            NSString *alph = pinYinData[j];
-            for (id model in lastArray) {
-                if ([alph isEqualToString:[model valueForKey:propertyName]]) {
-                    [tempData addObject:model];
-                }
-            }
-            
-            [totalData addObject:tempData];
-            
-        }
-    }
-    [totalData insertObject:firstArray atIndex:0];
-    
-    [totalData removeObjectAtIndex:1];
-    return totalData;
-    
-}
 #pragma mark ---------------------  第两个参数 ---------------------------
 #pragma mark ---------------------  城市  ---------------------------
 + (NSMutableArray *)sortedSelfTitleCityWithStringFirstTitle:(NSString *)title SecondTitle:(NSString *)subTitle{
