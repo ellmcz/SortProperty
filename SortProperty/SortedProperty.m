@@ -389,7 +389,8 @@
  *
  *  @return 拼音的数字
  */
-+ (NSMutableArray *)sortedSelfTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName FirstTitle:(NSString *)title{
++ (NSMutableArray *)sortedSelfTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName  IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title{
+    data=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
     NSMutableArray *array=[self sortedTitleDateWithArray:data PropertyName:propertyName];
     [array insertObject:title atIndex:0];
     return array;
