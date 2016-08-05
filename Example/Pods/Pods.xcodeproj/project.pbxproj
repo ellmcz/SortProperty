@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000C94DFEC6E98A2D8E601F8A7830F18 /* NSMutableArray+Only.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8845DC2CC53DC692C84B90622C4A56 /* NSMutableArray+Only.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0071FF2FC467F71AB6F79D194D00FA69 /* NSString+Chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E5122B9FA47F1F493C15439F721677 /* NSString+Chinese.m */; };
+		000C94DFEC6E98A2D8E601F8A7830F18 /* NSMutableArray+Only.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F5F5522D27BE41192AC1C47F8CCD827 /* NSMutableArray+Only.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0071FF2FC467F71AB6F79D194D00FA69 /* NSString+Chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B22AD380615BB06138839CA303144 /* NSString+Chinese.m */; };
 		0E2E28B58B5611571ED65EA4A20D45CA /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E77CEE02EB973905FA29179173A8923E /* Pods-Example-dummy.m */; };
-		0F22AC1169EFF4773259BF6984782F77 /* NSArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7A4C6E88C99B1961FCA87C5A335228 /* NSArray+Sort.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1187427026DA400B04F2A365D3A12C1F /* SortedProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FAFE743ED078FAB7289EDE8943B80E /* SortedProperty.m */; };
+		0F22AC1169EFF4773259BF6984782F77 /* NSArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AAB21466E8270CE3F1AE6F778051EC1 /* NSArray+Sort.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1187427026DA400B04F2A365D3A12C1F /* SortedProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 015689619D0C9061DC34E14585B0EAD7 /* SortedProperty.m */; };
 		1680A46F25DA8DFDB68529B790E192C7 /* Pods-ExampleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E14B7E2AF7F255A79220EFE5DC5229D /* Pods-ExampleUITests-dummy.m */; };
-		2A9618862D99657779843C3CD3878602 /* SortedProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F42DB8CC3566109EC74656661CDBE1E /* SortedProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		303E4FF782528206717F38B575B8136C /* NSString+Pure.h in Headers */ = {isa = PBXBuildFile; fileRef = 638CD735A464AE86DEFEEC44421D734A /* NSString+Pure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32CDE6B35FB7FE15E9E326406D062BEB /* SortProperty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDC924244A49843C8C51E7194DE451 /* SortProperty-dummy.m */; };
+		2A9618862D99657779843C3CD3878602 /* SortedProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB6AD03A213CC98DACF4341B1BE963A /* SortedProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		303E4FF782528206717F38B575B8136C /* NSString+Pure.h in Headers */ = {isa = PBXBuildFile; fileRef = CB117998D710619974D34438A2A892CE /* NSString+Pure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32CDE6B35FB7FE15E9E326406D062BEB /* SortProperty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C89E8AE8F4E43AE7955703F12C030B /* SortProperty-dummy.m */; };
 		335F55FEFEABD190F3D428FDA1F9515D /* Pods-ExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B08B89FCFA885065A0A954BF98DD73 /* Pods-ExampleTests-dummy.m */; };
-		4DF9FFCBC63FC0EC83EAF72D6A74DEDD /* NSString+Pure.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D9E39866DAAB06FB7EC4EA67A4DCD5 /* NSString+Pure.m */; };
-		5420762C1EF617DEF32F0A4DCCC43F0B /* NSString+Property.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F31FFF618F62345DE432E97A04E8A6E /* NSString+Property.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D51F7F2B8AADEF36CE704B90E1BFB74 /* NSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E08AA54AC4F4D3B0C93F7F19E826353 /* NSArray+Sort.m */; };
+		4DF9FFCBC63FC0EC83EAF72D6A74DEDD /* NSString+Pure.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5507D20801D69BC0C354901CA0ED81 /* NSString+Pure.m */; };
+		5420762C1EF617DEF32F0A4DCCC43F0B /* NSString+Property.h in Headers */ = {isa = PBXBuildFile; fileRef = 28632B5E53C8FDF84D851B834647F377 /* NSString+Property.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D51F7F2B8AADEF36CE704B90E1BFB74 /* NSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 31998A916C872C6CE0C8B25F0B692A29 /* NSArray+Sort.m */; };
 		6F3C393561302AB657DAA81C16BBD8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		7774E6C2F2900AE81B67C3EF45AC394A /* SortPropertyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B45DA63482A79103EC590AC2BBE11451 /* SortPropertyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78876E80E5C4FB00BD60486B8FF9F9D1 /* NSMutableArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B8DE514663A246B9CEC15A3781E05 /* NSMutableArray+Sort.m */; };
-		9E6A93DCBD4F6DD13D0B0E8BDB42A72D /* NSString+Chinese.h in Headers */ = {isa = PBXBuildFile; fileRef = C490BD3135F7C563800260D4A28148C2 /* NSString+Chinese.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7774E6C2F2900AE81B67C3EF45AC394A /* SortPropertyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = EA45F35E7D3281D6C4A9E32127B7DA0D /* SortPropertyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78876E80E5C4FB00BD60486B8FF9F9D1 /* NSMutableArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD60F6D25CDDF5727FBCF4D59A97F48 /* NSMutableArray+Sort.m */; };
+		9E6A93DCBD4F6DD13D0B0E8BDB42A72D /* NSString+Chinese.h in Headers */ = {isa = PBXBuildFile; fileRef = BC29FC981F6A10368CAF78ADF6413191 /* NSString+Chinese.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FBB53555AD8F6232F938CCED19BA636 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		AF6E8143C28D1A7A8E041D6C32C5F622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		BDC771093F570404A4675F0C23019DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		C730675B355E4AB61207827A7D59E818 /* NSMutableArray+Only.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5ED6954388306CFE627C883AAA4FFF /* NSMutableArray+Only.m */; };
-		D491866126B8AABE20A632F2F691E04D /* NSMutableArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = A218F542066BB0579DA74734FA7C2E91 /* NSMutableArray+Sort.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB840F15A2C957856207A573D9A0DA05 /* NSString+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = A329256BBACA5869A326659B40BD2F64 /* NSString+Property.m */; };
+		C730675B355E4AB61207827A7D59E818 /* NSMutableArray+Only.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D8C6A5C02F3EFA15532801374B3D2 /* NSMutableArray+Only.m */; };
+		D491866126B8AABE20A632F2F691E04D /* NSMutableArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = 9687E795216481BF384EB1105C2376F3 /* NSMutableArray+Sort.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB840F15A2C957856207A573D9A0DA05 /* NSString+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB3DB7435BF8A081B6D82EB5E70FD77 /* NSString+Property.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,51 +43,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0715F209BEF5175A39B85B5F459B5DFF /* SortProperty.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SortProperty.xcconfig; sourceTree = "<group>"; };
-		0AFDC924244A49843C8C51E7194DE451 /* SortProperty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SortProperty-dummy.m"; sourceTree = "<group>"; };
-		0E08AA54AC4F4D3B0C93F7F19E826353 /* NSArray+Sort.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Sort.m"; path = "SortProperty/NSArray+Sort.m"; sourceTree = "<group>"; };
+		015689619D0C9061DC34E14585B0EAD7 /* SortedProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SortedProperty.m; path = SortProperty/SortedProperty.m; sourceTree = "<group>"; };
+		0B5507D20801D69BC0C354901CA0ED81 /* NSString+Pure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Pure.m"; path = "SortProperty/NSString+Pure.m"; sourceTree = "<group>"; };
 		0E14B7E2AF7F255A79220EFE5DC5229D /* Pods-ExampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleUITests-dummy.m"; sourceTree = "<group>"; };
 		1165050CDD0371052690326F4268B721 /* Pods-ExampleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleUITests-frameworks.sh"; sourceTree = "<group>"; };
 		11F7CFE6B78601A4EF4FC06AA4D9161D /* Pods-ExampleUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleUITests-resources.sh"; sourceTree = "<group>"; };
-		15E5122B9FA47F1F493C15439F721677 /* NSString+Chinese.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Chinese.m"; path = "SortProperty/NSString+Chinese.m"; sourceTree = "<group>"; };
+		1F9B22AD380615BB06138839CA303144 /* NSString+Chinese.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Chinese.m"; path = "SortProperty/NSString+Chinese.m"; sourceTree = "<group>"; };
+		1FB6AD03A213CC98DACF4341B1BE963A /* SortedProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SortedProperty.h; path = SortProperty/SortedProperty.h; sourceTree = "<group>"; };
 		210E0212855AB2C64BA9E3284BDC8B08 /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		2A3B8DE514663A246B9CEC15A3781E05 /* NSMutableArray+Sort.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Sort.m"; path = "SortProperty/NSMutableArray+Sort.m"; sourceTree = "<group>"; };
+		28632B5E53C8FDF84D851B834647F377 /* NSString+Property.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Property.h"; path = "SortProperty/NSString+Property.h"; sourceTree = "<group>"; };
+		31998A916C872C6CE0C8B25F0B692A29 /* NSArray+Sort.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Sort.m"; path = "SortProperty/NSArray+Sort.m"; sourceTree = "<group>"; };
+		3AAB21466E8270CE3F1AE6F778051EC1 /* NSArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Sort.h"; path = "SortProperty/NSArray+Sort.h"; sourceTree = "<group>"; };
+		43FD4E710459D8DD5B078E8CFCE820DE /* SortProperty-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SortProperty-prefix.pch"; sourceTree = "<group>"; };
+		44B928A7E835C6DBD78ECEAC65F4331D /* Singleton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		44FAA530DAC1AC2369B058ACFEF4568D /* libPods-ExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B08B89FCFA885065A0A954BF98DD73 /* Pods-ExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleTests-dummy.m"; sourceTree = "<group>"; };
-		638CD735A464AE86DEFEEC44421D734A /* NSString+Pure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Pure.h"; path = "SortProperty/NSString+Pure.h"; sourceTree = "<group>"; };
-		64D9E39866DAAB06FB7EC4EA67A4DCD5 /* NSString+Pure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Pure.m"; path = "SortProperty/NSString+Pure.m"; sourceTree = "<group>"; };
+		4F5F5522D27BE41192AC1C47F8CCD827 /* NSMutableArray+Only.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Only.h"; path = "SortProperty/NSMutableArray+Only.h"; sourceTree = "<group>"; };
+		5A8D8C6A5C02F3EFA15532801374B3D2 /* NSMutableArray+Only.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Only.m"; path = "SortProperty/NSMutableArray+Only.m"; sourceTree = "<group>"; };
 		672F247EE932F990988F25DAFEAFD6E0 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		6F31FFF618F62345DE432E97A04E8A6E /* NSString+Property.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Property.h"; path = "SortProperty/NSString+Property.h"; sourceTree = "<group>"; };
+		78C89E8AE8F4E43AE7955703F12C030B /* SortProperty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SortProperty-dummy.m"; sourceTree = "<group>"; };
 		7DC9AF2447DE48E05BBD2E7A102756AA /* Pods-ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7F42DB8CC3566109EC74656661CDBE1E /* SortedProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SortedProperty.h; path = SortProperty/SortedProperty.h; sourceTree = "<group>"; };
+		7FD60F6D25CDDF5727FBCF4D59A97F48 /* NSMutableArray+Sort.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Sort.m"; path = "SortProperty/NSMutableArray+Sort.m"; sourceTree = "<group>"; };
 		808067C1D8762456415B0E116AC19958 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		818B7A9DD6A003EAF240AB23BB8F334C /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
 		84AAC1B9D16344AF993D42FCCE6E8CA8 /* libSortProperty.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSortProperty.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		87249A7A414F1DC8D789D8213640ECAF /* SortProperty-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SortProperty-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9583B5024C8DB95ED3E6BD366B98DC02 /* Pods-ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9C5ED6954388306CFE627C883AAA4FFF /* NSMutableArray+Only.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Only.m"; path = "SortProperty/NSMutableArray+Only.m"; sourceTree = "<group>"; };
+		9687E795216481BF384EB1105C2376F3 /* NSMutableArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Sort.h"; path = "SortProperty/NSMutableArray+Sort.h"; sourceTree = "<group>"; };
 		9CF5EAAE3C711A15973D184C414A385F /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A218F542066BB0579DA74734FA7C2E91 /* NSMutableArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Sort.h"; path = "SortProperty/NSMutableArray+Sort.h"; sourceTree = "<group>"; };
-		A329256BBACA5869A326659B40BD2F64 /* NSString+Property.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Property.m"; path = "SortProperty/NSString+Property.m"; sourceTree = "<group>"; };
-		A7FAFE743ED078FAB7289EDE8943B80E /* SortedProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SortedProperty.m; path = SortProperty/SortedProperty.m; sourceTree = "<group>"; };
-		AC8845DC2CC53DC692C84B90622C4A56 /* NSMutableArray+Only.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Only.h"; path = "SortProperty/NSMutableArray+Only.h"; sourceTree = "<group>"; };
-		B45DA63482A79103EC590AC2BBE11451 /* SortPropertyHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SortPropertyHeader.h; path = SortProperty/SortPropertyHeader.h; sourceTree = "<group>"; };
 		B916A883689C47CF863522F2B07E5FA1 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BC29FC981F6A10368CAF78ADF6413191 /* NSString+Chinese.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Chinese.h"; path = "SortProperty/NSString+Chinese.h"; sourceTree = "<group>"; };
 		BD579DEB5D6BF8B4E85C2A9E40397F99 /* Pods-ExampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleTests-frameworks.sh"; sourceTree = "<group>"; };
-		C490BD3135F7C563800260D4A28148C2 /* NSString+Chinese.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Chinese.h"; path = "SortProperty/NSString+Chinese.h"; sourceTree = "<group>"; };
+		CB117998D710619974D34438A2A892CE /* NSString+Pure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Pure.h"; path = "SortProperty/NSString+Pure.h"; sourceTree = "<group>"; };
 		CB1B184DD29EBA3369A9CFCE16539359 /* Pods-ExampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CE05E5E69C8B7ECCD951565B9E2E3046 /* Pods-ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D3F568FF1B2D14A1968F232398EDDB02 /* Pods-ExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E4ABBF6C358955AFDEE464034636312A /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E77CEE02EB973905FA29179173A8923E /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		E7B4B6B04B23F165552796B6EA27A360 /* SortProperty.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SortProperty.xcconfig; sourceTree = "<group>"; };
+		EA45F35E7D3281D6C4A9E32127B7DA0D /* SortPropertyHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SortPropertyHeader.h; path = SortProperty/SortPropertyHeader.h; sourceTree = "<group>"; };
 		EDE78083A6D41F43AEFE3D059BA7D999 /* Pods-ExampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		EF6D9F003601623058CB6A0C4D5A093A /* Pods-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F820154E747B28E0889F0C33226C40C0 /* Pods-ExampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleTests-resources.sh"; sourceTree = "<group>"; };
+		FBB3DB7435BF8A081B6D82EB5E70FD77 /* NSString+Property.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Property.m"; path = "SortProperty/NSString+Property.m"; sourceTree = "<group>"; };
 		FD0068599235F265BD86E61C70DD38DB /* libPods-ExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFA308AFDDD066350E11ECA33BB4656 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
-		FF7A4C6E88C99B1961FCA87C5A335228 /* NSArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Sort.h"; path = "SortProperty/NSArray+Sort.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +166,18 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				D444EF086A68586E2953BD0F78BF1714 /* Pods */,
+				B2AA496C4FC67FB6085D9E7B55C9A129 /* Pods */,
 				271615E48D10F943FCE0A73FA679C066 /* Products */,
 				F881667A9F8B28BEF4377921DC283C53 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		865D8FCB651B9CFB79D2D974FC21C572 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				44B928A7E835C6DBD78ECEAC65F4331D /* Singleton.h */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		A5216915028D33073FA488DE84B1C094 /* Pods-Example */ = {
@@ -186,25 +195,34 @@
 			path = "Target Support Files/Pods-Example";
 			sourceTree = "<group>";
 		};
-		B1FFAA08DB2CC60A914F07754CBAA6EC /* SortProperty */ = {
+		B2AA496C4FC67FB6085D9E7B55C9A129 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FF7A4C6E88C99B1961FCA87C5A335228 /* NSArray+Sort.h */,
-				0E08AA54AC4F4D3B0C93F7F19E826353 /* NSArray+Sort.m */,
-				AC8845DC2CC53DC692C84B90622C4A56 /* NSMutableArray+Only.h */,
-				9C5ED6954388306CFE627C883AAA4FFF /* NSMutableArray+Only.m */,
-				A218F542066BB0579DA74734FA7C2E91 /* NSMutableArray+Sort.h */,
-				2A3B8DE514663A246B9CEC15A3781E05 /* NSMutableArray+Sort.m */,
-				C490BD3135F7C563800260D4A28148C2 /* NSString+Chinese.h */,
-				15E5122B9FA47F1F493C15439F721677 /* NSString+Chinese.m */,
-				6F31FFF618F62345DE432E97A04E8A6E /* NSString+Property.h */,
-				A329256BBACA5869A326659B40BD2F64 /* NSString+Property.m */,
-				638CD735A464AE86DEFEEC44421D734A /* NSString+Pure.h */,
-				64D9E39866DAAB06FB7EC4EA67A4DCD5 /* NSString+Pure.m */,
-				7F42DB8CC3566109EC74656661CDBE1E /* SortedProperty.h */,
-				A7FAFE743ED078FAB7289EDE8943B80E /* SortedProperty.m */,
-				B45DA63482A79103EC590AC2BBE11451 /* SortPropertyHeader.h */,
-				F08E8FFE9A43F439FA152DB638E9AFEA /* Support Files */,
+				865D8FCB651B9CFB79D2D974FC21C572 /* Singleton */,
+				BAE8176403CA826E54B9196550482BD1 /* SortProperty */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BAE8176403CA826E54B9196550482BD1 /* SortProperty */ = {
+			isa = PBXGroup;
+			children = (
+				3AAB21466E8270CE3F1AE6F778051EC1 /* NSArray+Sort.h */,
+				31998A916C872C6CE0C8B25F0B692A29 /* NSArray+Sort.m */,
+				4F5F5522D27BE41192AC1C47F8CCD827 /* NSMutableArray+Only.h */,
+				5A8D8C6A5C02F3EFA15532801374B3D2 /* NSMutableArray+Only.m */,
+				9687E795216481BF384EB1105C2376F3 /* NSMutableArray+Sort.h */,
+				7FD60F6D25CDDF5727FBCF4D59A97F48 /* NSMutableArray+Sort.m */,
+				BC29FC981F6A10368CAF78ADF6413191 /* NSString+Chinese.h */,
+				1F9B22AD380615BB06138839CA303144 /* NSString+Chinese.m */,
+				28632B5E53C8FDF84D851B834647F377 /* NSString+Property.h */,
+				FBB3DB7435BF8A081B6D82EB5E70FD77 /* NSString+Property.m */,
+				CB117998D710619974D34438A2A892CE /* NSString+Pure.h */,
+				0B5507D20801D69BC0C354901CA0ED81 /* NSString+Pure.m */,
+				1FB6AD03A213CC98DACF4341B1BE963A /* SortedProperty.h */,
+				015689619D0C9061DC34E14585B0EAD7 /* SortedProperty.m */,
+				EA45F35E7D3281D6C4A9E32127B7DA0D /* SortPropertyHeader.h */,
+				E1A70B065CAF09D2C0A911F03ADCE68F /* Support Files */,
 			);
 			path = SortProperty;
 			sourceTree = "<group>";
@@ -232,20 +250,12 @@
 			path = "Target Support Files/Pods-ExampleUITests";
 			sourceTree = "<group>";
 		};
-		D444EF086A68586E2953BD0F78BF1714 /* Pods */ = {
+		E1A70B065CAF09D2C0A911F03ADCE68F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1FFAA08DB2CC60A914F07754CBAA6EC /* SortProperty */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F08E8FFE9A43F439FA152DB638E9AFEA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0715F209BEF5175A39B85B5F459B5DFF /* SortProperty.xcconfig */,
-				0AFDC924244A49843C8C51E7194DE451 /* SortProperty-dummy.m */,
-				87249A7A414F1DC8D789D8213640ECAF /* SortProperty-prefix.pch */,
+				E7B4B6B04B23F165552796B6EA27A360 /* SortProperty.xcconfig */,
+				78C89E8AE8F4E43AE7955703F12C030B /* SortProperty-dummy.m */,
+				43FD4E710459D8DD5B078E8CFCE820DE /* SortProperty-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SortProperty";
@@ -475,7 +485,7 @@
 		};
 		49E1039EB2B0F699A27923063A8830DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0715F209BEF5175A39B85B5F459B5DFF /* SortProperty.xcconfig */;
+			baseConfigurationReference = E7B4B6B04B23F165552796B6EA27A360 /* SortProperty.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -578,7 +588,7 @@
 		};
 		90EA83654AB48AFF0EFF2EE26FC5D109 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0715F209BEF5175A39B85B5F459B5DFF /* SortProperty.xcconfig */;
+			baseConfigurationReference = E7B4B6B04B23F165552796B6EA27A360 /* SortProperty.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;

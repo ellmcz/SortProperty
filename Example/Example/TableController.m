@@ -11,6 +11,7 @@
 #import "CompanyModel.h"
 #import "CityModel.h"
 #import "MJExtension.h"
+#import "CityTool.h"
 @interface TableController ()
 tableViewData_h()
 
@@ -94,7 +95,7 @@ tableViewSectionIndexTitle_m()
     }
     if (self.flag==4) {
         
-        self.data=[CityModel mj_objectArrayWithFilename:@"chinacities.plist"];
+        self.data=[CityTool sharedCityTool].city;
         self.pinYinData=[SortedProperty sortedTitleCityWithString];
         self.totalData=[SortedProperty sortedCityModelCityWithArray:self.data PinYinData:self.pinYinData PropertyName:@"name"];
     }

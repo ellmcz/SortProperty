@@ -10,6 +10,7 @@
 		5065E78D316BEA1F4D62E225 /* libPods-ExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D0843E5904344EA613F63C /* libPods-ExampleTests.a */; };
 		638A4AF639CF40AE7186D77D /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B64DA5A414E549D29E712FC /* libPods-Example.a */; };
 		E201E794DE29CC8927B37F1F /* libPods-ExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5EBE24D8F0E6694DBA4E1C /* libPods-ExampleUITests.a */; };
+		FA20BBDA1D53575100018ADD /* CityTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20BBD91D53575100018ADD /* CityTool.m */; };
 		FA88B7711D477B3B004E5510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA88B7701D477B3B004E5510 /* main.m */; };
 		FA88B7741D477B3B004E5510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA88B7731D477B3B004E5510 /* AppDelegate.m */; };
 		FA88B7771D477B3B004E5510 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA88B7761D477B3B004E5510 /* ViewController.m */; };
@@ -62,6 +63,8 @@
 		B2CA89942C6D6356B79271F2 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CF8F5A96E2D1F3FDE4C846EE /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleTests/Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8F61ACAFE5AE859AF9A1552 /* Pods-ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleUITests/Pods-ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA20BBD81D53575100018ADD /* CityTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTool.h; sourceTree = "<group>"; };
+		FA20BBD91D53575100018ADD /* CityTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTool.m; sourceTree = "<group>"; };
 		FA2A1F43E174E6B984D79383 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		FA5EBE24D8F0E6694DBA4E1C /* libPods-ExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA88B76C1D477B3B004E5510 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +199,8 @@
 				FA88B7E21D477DA1004E5510 /* CompanyModel.h */,
 				FA88B7E31D477DA1004E5510 /* CompanyModel.m */,
 				FA88B7BC1D477BFA004E5510 /* TableController.m */,
+				FA20BBD81D53575100018ADD /* CityTool.h */,
+				FA20BBD91D53575100018ADD /* CityTool.m */,
 				FA88B7E61D477DAB004E5510 /* chinacities.plist */,
 				FA88B7BE1D477CAA004E5510 /* MJExtension */,
 				FA88B7781D477B3B004E5510 /* Main.storyboard */,
@@ -548,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA88B7BD1D477BFA004E5510 /* TableController.m in Sources */,
+				FA20BBDA1D53575100018ADD /* CityTool.m in Sources */,
 				FA88B7D61D477CAA004E5510 /* MJFoundation.m in Sources */,
 				FA88B7D51D477CAA004E5510 /* MJExtensionConst.m in Sources */,
 				FA88B7771D477B3B004E5510 /* ViewController.m in Sources */,

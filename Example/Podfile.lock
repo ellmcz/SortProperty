@@ -1,12 +1,15 @@
 PODS:
-  - SortProperty (1.3)
+  - Singleton (1.0.1)
+  - SortProperty (1.3.3)
 
 DEPENDENCIES:
+  - Singleton
   - SortProperty
 
 SPEC CHECKSUMS:
-  SortProperty: c5f2571c78ddf6fafe6c082aaff59f6d4e1876e3
+  Singleton: bbcebd2ee028eec9868121d9ae5ef29e68397302
+  SortProperty: 809c8c3e74d888a7ca7626fb34177259274881f7
 
-PODFILE CHECKSUM: 79ba8a4dd5447f34ad5c49d08545b3139affa739
+PODFILE CHECKSUM: f3c0e7c2c32b0b907d412cf4194d2df49556e7ff
 
 COCOAPODS: 1.1.0.beta.1

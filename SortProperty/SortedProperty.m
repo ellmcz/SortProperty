@@ -14,6 +14,22 @@
 #import "NSString+Property.h"
 #import "NSString+Pure.h"
 @implementation SortedProperty
+#pragma mark ---------------------  热门  ---------------------------
+/**
+ *   为判断是否热门信息
+ *
+ *  @param rating 热门值
+ *  @param min    至小热门值
+ *
+ *  @return 是否热门
+ */
++ (BOOL)settingPropertyNameWithRating:(int)rating Min:(int)min{
+    if (rating>min) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
 #pragma mark ---------------------  字符串  ---------------------------
 
 /**
@@ -169,7 +185,9 @@
  *
  *  @return 拼音的数字
  */
-+ (NSMutableArray *)sortedTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName FirstTitle:(NSString *)title{
++ (NSMutableArray *)sortedTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title{
+    isBoolPropertyName=isBoolPropertyName.isBool;
+    data=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
     NSMutableArray *array=[self sortedTitleDateWithArray:data PropertyName:propertyName];
     [array insertObject:title atIndex:0];
     return array;
@@ -216,80 +234,7 @@
     return totalData;
     
 }
-#pragma mark ---------------------  热门  ---------------------------
-+ (BOOL)settingPropertyNameWithRating:(int)rating Min:(int)min{
-    if (rating>min) {
-        return YES;
-    }else{
-        return NO;
-    }
-}
-/**
- *   为排序模型属性的首字母进行排序，并且返回新模型数组(热门)
- *
- *  @param data         模型数组
- *  @param propertyName 模型的属性名
- *  @param title        第一个标题
- *
- *  @return            新添加排序的模型属性值
- */
-+ (NSMutableArray *)sortedTitleRatingWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName  FirstTitle:(NSString *)title{
-    NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
-    propertyName=propertyName.propertyFirstPinYin;
-    NSString *first=[isBoolPropertyName uppercaseString];
-    first =[first substringToIndex:1];
-    NSString * last =[isBoolPropertyName substringFromIndex:1];
-    isBoolPropertyName=[NSString stringWithFormat:@"is%@%@",first,last];
-    data=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    for (id m in data) {
-        if (![[m valueForKey:isBoolPropertyName]isEqual:@1]) {
-            [pinYinData addObject:[m valueForKey:propertyName]];
-        }
-        
-    }
-    pinYinData=pinYinData.saveOnlyWithArray;
-    NSArray *arrayM=[pinYinData sortedArrayDescendingWithChineseKey:nil];
-    [pinYinData removeAllObjects];
-    [pinYinData addObjectsFromArray:arrayM];
-    [pinYinData insertObject:title atIndex:0];
-    return pinYinData;
-    
-}
-/**
- *  热门 为排序模型属性的首字母进行排序，并且返回新模型数组
- *
- *  @param data         模型数组
- *  @param propertyName 培训的模型属性名
- *  @param isBool       判断是不是热门
- *
- *  @return 新的模型数组
- */
-+ (NSMutableArray *)sortedModelRatingWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName  IsBoolPropertyName:(NSString *)isBoolPropertyName{
-    propertyName=propertyName.propertyFirstPinYin;
-    isBoolPropertyName=isBoolPropertyName.isBool;
-    NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    NSMutableArray *firstArray=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    firstArray=[firstArray sortedDescendingWithChineseKey:propertyName];
-    NSMutableArray *lastArray=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    @autoreleasepool {
-        for (int j = 0; j<pinYinData.count; j++) {
-            NSMutableArray *tempData = [[NSMutableArray alloc]init];
-            NSString *alph = pinYinData[j];
-            for (id model in lastArray) {
-                if ([alph isEqualToString:[model valueForKey:propertyName]]) {
-                    [tempData addObject:model];
-                }
-            }
-            
-            [totalData addObject:tempData];
-            
-        }
-    }
-    [totalData insertObject:firstArray atIndex:0];
-    
-    [totalData removeObjectAtIndex:1];
-    return totalData;
-}
+
 #pragma mark --------------------- 城市  ---------------------------
 
 /**
@@ -436,45 +381,6 @@
     return totalData;
 }
 
-#pragma mark ---------------------热门和开头---------------------------
-
-/**
- *   为排序模型属性的首字母进行排序，并且返回新模型数组(热门)
- *
- *  @param data         模型数组
- *  @param propertyName 模型的属性名
- *  @param isBoolPropertyName  判断是否热门的属性
- *  @param title        第一个标题
- *
- *  @return            新添加排序的模型属性值
- */
-+ (NSMutableArray *)sortedSelfTitleRatingWithArray:(NSMutableArray *)data  PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName  FirstTitle:(NSString *)title{
-    NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
-    propertyName=propertyName.propertyFirstPinYin;
-    data=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    for (id m in data) {
-        if (![[m valueForKey:isBoolPropertyName]isEqual:@1]) {
-            [pinYinData addObject:[m valueForKey:propertyName]];
-        }
-        
-    }
-    pinYinData=pinYinData.saveOnlyWithArray;
-    NSArray *arrayM=[pinYinData sortedArrayDescendingWithChineseKey:nil];
-    [pinYinData removeAllObjects];
-    [pinYinData addObjectsFromArray:arrayM];
-    [pinYinData insertObject:title atIndex:0];
-    return pinYinData;
-    
-}
-/**
- *  热门 为排序模型属性的首字母进行排序，并且返回新模型数组
- *
- *  @param data         模型数组
- *  @param propertyName 培训的模型属性名
- *  @param isBoolPropertyName    判断是不是热门属性
- *
- *  @return 新的模型数组
- */
 + (NSMutableArray *)sortedSelfModelRatingWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName  IsBoolPropertyName:(NSString *)isBoolPropertyName{
     propertyName=propertyName.propertyFirstPinYin;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
@@ -608,7 +514,14 @@
 
 
 #pragma mark ---------------------  同一天  ---------------------------
-
+/**
+ *  判断是不是同一天
+ *
+ *  @param data         模型数组
+ *  @param propertyName 属性名
+ *
+ *  @return 日期
+ */
 + (NSMutableArray *)sortedTitleSameDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName{
     data=[data sortedAscendingWithChineseKey:propertyName];
     NSMutableArray *pinYinData=[[NSMutableArray alloc]init];
@@ -622,6 +535,15 @@
     
     return pinYinData;
 }
+/**
+ *  判断是不是同一天,返回数组模型
+ *
+ *  @param data         模型数组
+ *  @param pinYinData   日期
+ *  @param propertyName 属性名
+ *
+ *  @return 新的模型数组
+ */
 + (NSMutableArray *)sortedModelSameDateWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName{
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
     @autoreleasepool {

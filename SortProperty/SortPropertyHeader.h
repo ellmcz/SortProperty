@@ -27,7 +27,6 @@ FOUNDATION_EXPORT const unsigned char SortPropertyVersionString[];
 #import "NSString+Pure.h"
 #import "NSString+Property.h"
 #endif
-
 #if __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
 #import <SortPropertyHeader/SortPropertyHeader.h>
 #elif __has_include(<SortPropertyHeader/SortPropertyHeader.h>)
