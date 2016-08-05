@@ -50,6 +50,26 @@ typedef NS_ENUM(NSInteger, DateType){
  *  @return 排序完成之后新模型数组
  */
 + (NSMutableArray *)sortedModelStringWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName;
+#pragma mark ---------------------  字符串和开头 ---------------------------
+/**
+ *  为排序模型属性的首字母进行排序（字符串）
+ *
+ *  @param data         需要排序的模型数组
+ *  @param propertyName 需要排序的模型属性名
+ *
+ *  @return 排序的首字母
+ */
++ (NSMutableArray *)sortedTitleStringWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title;
+/**
+ *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串）
+ *
+ *  @param data         需要排序的模型数组
+ *  @param propertyName 需要排序的模型属性名
+ *
+ *  @return 排序完成之后新模型数组
+ */
++ (NSMutableArray *)sortedModelStringWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName;
+
 #pragma mark --------------------- 日期 ---------------------------
 /**
  *  为新添加排序的模型属性赋值（字符串,数字）
@@ -133,7 +153,7 @@ typedef NS_ENUM(NSInteger, DateType){
  *
  *  @return 排序的首字母
  */
-+ (NSMutableArray *)sortedSelfTitleStringWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName FirstTitle:(NSString *)title;
++ (NSMutableArray *)sortedSelfTitleStringWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title;
 /**
  *  为排序模型属性的首字母进行排序，并且返回新模型数组（字符串）
  *
