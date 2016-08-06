@@ -174,7 +174,7 @@ typedef NS_ENUM(NSInteger, DateType){
  *
  *  @return 拼音的数字
  */
-+ (NSMutableArray *)sortedSelfTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title;
++ (NSMutableArray *)sortedSelfTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName FirstTitle:(NSString *)title;
 
 /**
  *  通过模型数组返回新的模型数组

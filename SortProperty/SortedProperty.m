@@ -71,20 +71,19 @@
 + (NSMutableArray *)sortedModelStringWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName {
     propertyName=propertyName.propertyFirstPinYin;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    @autoreleasepool {
-        for (int j = 0; j<pinYinData.count; j++) {
-            NSMutableArray *tempData = [[NSMutableArray alloc]init];
-            NSString *alph = pinYinData[j];
-            for (id model in data) {
-                
-                if ([alph isEqualToString:[model valueForKey:propertyName]]) {
+    for (int j = 0; j<pinYinData.count; j++) {
+        @autoreleasepool {
+        NSMutableArray *tempData = [[NSMutableArray alloc]init];
+        NSString *alph = pinYinData[j];
+        for (id model in data) {
+            if ([alph isEqualToString:[model valueForKey:propertyName]]) {
                     [tempData addObject:model];
-                }
-            }
-            
-            [totalData addObject:tempData];
-            
         }
+    }
+            
+      [totalData addObject:tempData];
+    }
+        
     }
     return totalData;
 }
@@ -98,7 +97,7 @@
 *  @return 排序的首字母
 */
 + (NSMutableArray *)sortedTitleStringWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title{
-    data=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName.isBool];
+    data=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName.isBool];
     NSMutableArray *pinYinData=[self sortedTitleStringWithArray:data PropertyName:propertyName];
     
     [pinYinData insertObject:title atIndex:0];
@@ -116,25 +115,23 @@
     propertyName=propertyName.propertyFirstPinYin;
     isBoolPropertyName=isBoolPropertyName.isBool;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    NSMutableArray *firstArray=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
+    NSMutableArray *firstArray=[self saveConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
     firstArray=(NSMutableArray *)[firstArray sortedDescendingWithChineseKey:propertyName];
-    NSMutableArray *lastArray=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    @autoreleasepool {
-        for (int j = 0; j<pinYinData.count; j++) {
-            NSMutableArray *tempData = [[NSMutableArray alloc]init];
-            NSString *alph = pinYinData[j];
-            for (id model in lastArray) {
-                if ([alph isEqualToString:[model valueForKey:propertyName]]) {
+    NSMutableArray *lastArray=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
+    for (int j = 0; j<pinYinData.count; j++) {
+        @autoreleasepool {
+        NSMutableArray *tempData = [[NSMutableArray alloc]init];
+        NSString *alph = pinYinData[j];
+        for (id model in lastArray) {
+        if ([alph isEqualToString:[model valueForKey:propertyName]]) {
                     [tempData addObject:model];
-                }
-            }
-            
-            [totalData addObject:tempData];
+        }
+      }
+        [totalData addObject:tempData];
             
         }
     }
     [totalData insertObject:firstArray atIndex:0];
-    
     [totalData removeObjectAtIndex:1];
     return totalData;
 }
@@ -187,11 +184,8 @@
     data=[data sortedDescendingWithChineseKey:propertyName];
     propertyName=propertyName.propertyFirstPinYin;
     for (id m in data) {
-        
         [pinYinData addObject:[m valueForKey:propertyName]];
     }
-    
-
     return pinYinData.saveOnlyWithArray;
 }
 /**
@@ -205,21 +199,16 @@
 + (NSMutableArray *)sortedModelDateWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName{
     propertyName=propertyName.propertyFirstPinYin;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    @autoreleasepool {
-        for (int j = 0; j<pinYinData.count; j++) {
-            NSMutableArray *tempData = [[NSMutableArray alloc]init];;
-            NSString *alph = pinYinData[j];
-            for (int m = 0; m <data.count; m++) {
-                id model = data[m];
-                
-                if ([alph isEqualToString:[model valueForKey:propertyName]]) {
-                    
-                    [tempData addObject:model];
-                }
-                
+    for (int j = 0; j<pinYinData.count; j++) {
+        @autoreleasepool {
+        NSMutableArray *tempData = [[NSMutableArray alloc]init];;
+        NSString *alph = pinYinData[j];
+        for (id model in data) {
+           if ([alph isEqualToString:[model valueForKey:propertyName]]) {
+                [tempData addObject:model];
             }
-            
-            [totalData addObject:tempData];
+        }
+       [totalData addObject:tempData];
             
         }
     }
@@ -237,7 +226,7 @@
  */
 + (NSMutableArray *)sortedTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title{
     isBoolPropertyName=isBoolPropertyName.isBool;
-    data=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
+    data=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
     NSMutableArray *array=[self sortedTitleDateWithArray:data PropertyName:propertyName];
     [array insertObject:title atIndex:0];
     return array;
@@ -255,16 +244,14 @@
 
 + (NSMutableArray *)sortedModelDateWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName{
     propertyName=propertyName.propertyFirstPinYin;
-    NSString *first=[isBoolPropertyName uppercaseString];
-    first =[first substringToIndex:1];
-    NSString * last =[isBoolPropertyName substringFromIndex:1];
-    isBoolPropertyName=[NSString stringWithFormat:@"is%@%@",first,last];
+    isBoolPropertyName=isBoolPropertyName.isBool;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    NSMutableArray *firstArray=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
+    NSMutableArray *firstArray=[self saveConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
     firstArray=(NSMutableArray *)[firstArray sortedDescendingWithChineseKey:propertyName];
-    NSMutableArray *lastArray=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    @autoreleasepool {
+    NSMutableArray *lastArray=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
+
         for (int j = 0; j<pinYinData.count; j++) {
+                @autoreleasepool {
             NSMutableArray *tempData = [[NSMutableArray alloc]init];
             NSString *alph = pinYinData[j];
             for (id model in lastArray) {
@@ -311,8 +298,9 @@
 + (NSMutableArray *)sortedCityModelCityWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName{
     propertyName=propertyName.propertyFirstPinYin;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    @autoreleasepool {
+ 
         for (int j = 0; j<pinYinData.count; j++) {
+               @autoreleasepool {
             NSMutableArray *tempData = [[NSMutableArray alloc]init];;
             NSString *alph = pinYinData[j];
             for (int m = 0; m <data.count; m++) {
@@ -340,7 +328,7 @@
  *  @return 排序的首字母
  */
 + (NSMutableArray *)sortedSelfTitleStringWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title{
-    data=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
+    data=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
     NSMutableArray *pinYinData=[self sortedTitleStringWithArray:data PropertyName:propertyName];
     [pinYinData insertObject:title atIndex:0];
     return pinYinData;
@@ -356,11 +344,11 @@
 + (NSMutableArray *)sortedSelfModelStringWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName{
     propertyName=propertyName.propertyFirstPinYin;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    NSMutableArray *firstArray=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
+    NSMutableArray *firstArray=[self saveConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
     firstArray=(NSMutableArray *)[firstArray sortedDescendingWithChineseKey:propertyName];
-    NSMutableArray *lastArray=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    @autoreleasepool {
+    NSMutableArray *lastArray=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
         for (int j = 0; j<pinYinData.count; j++) {
+            @autoreleasepool {
             NSMutableArray *tempData = [[NSMutableArray alloc]init];
             NSString *alph = pinYinData[j];
             for (id model in lastArray) {
@@ -368,7 +356,6 @@
                     [tempData addObject:model];
                 }
             }
-            
             [totalData addObject:tempData];
             
         }
@@ -389,8 +376,7 @@
  *
  *  @return 拼音的数字
  */
-+ (NSMutableArray *)sortedSelfTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName  IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title{
-    data=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
++ (NSMutableArray *)sortedSelfTitleDateWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName FirstTitle:(NSString *)title{
     NSMutableArray *array=[self sortedTitleDateWithArray:data PropertyName:propertyName];
     [array insertObject:title atIndex:0];
     return array;
@@ -409,11 +395,12 @@
 + (NSMutableArray *)sortedSelfModelDateWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName{
     propertyName=propertyName.propertyFirstPinYin;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    NSMutableArray *firstArray=[self saveRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
+    NSMutableArray *firstArray=[self saveConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
     firstArray=(NSMutableArray *)[firstArray sortedDescendingWithChineseKey:propertyName];
-    NSMutableArray *lastArray=[self deteleRatingWithArray:data isBoolPropertyName:isBoolPropertyName];
-    @autoreleasepool {
+    NSMutableArray *lastArray=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
+   
         for (int j = 0; j<pinYinData.count; j++) {
+             @autoreleasepool {
             NSMutableArray *tempData = [[NSMutableArray alloc]init];
             
             NSString *alph = pinYinData[j];
@@ -431,6 +418,7 @@
     [totalData removeObjectAtIndex:1];
     return totalData;
 }
+
 
 #pragma mark ---------------------  第两个参数 ---------------------------
 #pragma mark ---------------------  城市  ---------------------------
@@ -467,8 +455,9 @@
 + (NSMutableArray *)sortedSelfCityModelCityWithArray:(NSMutableArray *)data PinYinData:(NSMutableArray*)pinYinData PropertyName:(NSString *)propertyName FirstArray:(NSMutableArray *)firstArray SecondArray:(NSMutableArray *)secondArray{
     propertyName=propertyName.propertyFirstPinYin;
     NSMutableArray *totalData=[[NSMutableArray alloc]init];
-    @autoreleasepool {
+  
         for (int j = 0; j<pinYinData.count; j++) {
+              @autoreleasepool {
             NSMutableArray *tempData = [[NSMutableArray alloc]init];;
             NSString *alph = pinYinData[j];
             for (int m = 0; m <data.count; m++) {
@@ -509,7 +498,7 @@
  *
  *  @return 新的模型数组
  */
-+ (NSMutableArray *)deteleRatingWithArray:(NSMutableArray *)data isBoolPropertyName:(NSString *)isBoolPropertyName{
++ (NSMutableArray *)deteleConditonWithArray:(NSMutableArray *)data isBoolPropertyName:(NSString *)isBoolPropertyName{
     NSMutableArray *arrayM=[[NSMutableArray alloc]init];
     for (id m in data) {
         if (![[m valueForKey:isBoolPropertyName]isEqual:@1]) {
@@ -526,7 +515,7 @@
  *
  *  @return 新的模型数组
  */
-+ (NSMutableArray *)saveRatingWithArray:(NSMutableArray *)data isBoolPropertyName:(NSString *)isBoolPropertyName{
++ (NSMutableArray *)saveConditonWithArray:(NSMutableArray *)data isBoolPropertyName:(NSString *)isBoolPropertyName{
     NSMutableArray *arrayM=[[NSMutableArray alloc]init];
     for (id m in data) {
         if ([[m valueForKey:isBoolPropertyName]isEqual:@1]) {
