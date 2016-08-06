@@ -1,0 +1,6 @@
+framework module SortProperty {
+  umbrella header "SortProperty-umbrella.h"
+
+  export *
+  module * { export * }
+}
