@@ -1,11 +1,11 @@
 PODS:
-  - SortProperty (1.5.4)
+  - SortProperty (1.5.6)
 
 DEPENDENCIES:
   - SortProperty
 
 SPEC CHECKSUMS:
-  SortProperty: 08aad57f49cb607153893d98e2e2de3aad592a6f
+  SortProperty: 190abdc3b3eb8c10fef26deff83d625d6c0bc3ee
 
 PODFILE CHECKSUM: e8f6e46c61f8d3ad1ba14484f602601d12f4bf48
 
