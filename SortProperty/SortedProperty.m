@@ -98,7 +98,7 @@
 */
 + (NSMutableArray *)sortedTitleStringWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title{
     data=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName.isBool];
-    NSMutableArray *pinYinData=[self sortedTitleStringWithArray:data PropertyName:propertyName];
+    NSMutableArray *pinYinData=[[NSMutableArray alloc] initWithArray: [self sortedTitleStringWithArray:data PropertyName:propertyName]];
     
     [pinYinData insertObject:title atIndex:0];
     return pinYinData;
@@ -329,7 +329,7 @@
  */
 + (NSMutableArray *)sortedSelfTitleStringWithArray:(NSMutableArray *)data PropertyName:(NSString *)propertyName IsBoolPropertyName:(NSString *)isBoolPropertyName FirstTitle:(NSString *)title{
     data=[self deteleConditonWithArray:data isBoolPropertyName:isBoolPropertyName];
-    NSMutableArray *pinYinData=[self sortedTitleStringWithArray:data PropertyName:propertyName];
+    NSMutableArray *pinYinData=[[NSMutableArray alloc] initWithArray:[self sortedTitleStringWithArray:data PropertyName:propertyName]];
     [pinYinData insertObject:title atIndex:0];
     return pinYinData;
 }
